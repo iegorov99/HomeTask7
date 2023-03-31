@@ -28,6 +28,8 @@ void PrintArray(double[,] array)
     }
 }
 
+try
+{
 int rows = Enter("Введите количество строк: ");
 int cols = Enter("Введите количество столбцов: ");
 int min = Enter("Введите минимально возможное число: ");
@@ -35,3 +37,8 @@ int max = Enter("Введите максимально возможное чис
 double[,] array = new double[rows, cols];
 FillArray(array, min, max);
 PrintArray(array);
+}
+catch
+{
+    Console.WriteLine("Введено некорректное значение");
+}
